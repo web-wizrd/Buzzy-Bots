@@ -20,16 +20,14 @@ function sendMessage() {
 }
 
 function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('.chat-container').classList.toggle('dark-mode');
-    document.querySelector('.chat-body').classList.toggle('dark-mode');
-    document.querySelector('.chat-input').classList.toggle('dark-mode');
-    document.querySelector('.chat-input input').classList.toggle('dark-mode');
-    document.querySelector('.chat-input button').classList.toggle('dark-mode');
+    const darkModeEnabled = document.getElementById('darkModeToggle').checked;
+    const darkModeStylesheet = document.getElementById('darkModeStylesheet');
 
-    // Toggle dark mode for each message element
-    const messages = document.querySelectorAll('.message p');
-    messages.forEach(message => {
-        message.classList.toggle('dark-mode');
-    });
+    if (darkModeEnabled) {
+        // Apply dark mode CSS
+        darkModeStylesheet.href = "dark-mode.css";
+    } else {
+        // Remove dark mode CSS
+        darkModeStylesheet.href = "";
+    }
 }
