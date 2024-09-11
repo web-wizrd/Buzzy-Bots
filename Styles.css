@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #555555;
+    background-color: #cac7c7;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,7 +14,7 @@ body {
     width: 400px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
