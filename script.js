@@ -24,11 +24,13 @@ function toggleDarkMode() {
     const darkModeEnabled = document.getElementById('darkModeToggle');
     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
 
-    if (num%2==0) {
+    if (num%2!=0) {
         // Apply dark mode CSS
         darkModeStylesheet.href = "dark.css";
+        darkModeEnabled.value="Light Mode";
     } else {
         // Remove dark mode CSS
+        darkModeEnabled.value="Dark Mode";
         darkModeStylesheet.href = "Styles.css";
     }
 }
