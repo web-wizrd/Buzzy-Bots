@@ -6,12 +6,17 @@
     <title>Chatbot with Dark Mode</title>
     <link rel="stylesheet" href="dark.css">
     <link rel="stylesheet" id="darkModeStylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 
     <div class="toggle-container">
         <label for="darkModeToggle"></label>
-        <input type="button" value="Dark Mode" id="darkModeToggle" onclick="toggleDarkMode()">
+        <button value="Dark Mode" id="darkModeToggle" onclick="toggleDarkMode()">
+            <span class="material-symbols-outlined" id="Theme_icon">
+                dark_mode
+                </span>
+            
     </div>
 
     <div class="chat-container">

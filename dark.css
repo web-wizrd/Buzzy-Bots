@@ -10,7 +10,9 @@ body {
     transition: background-color 0.3s ease;
     color: white;
 }
-
+#darkModeToggle{
+    display: hidden;
+}
 .chat-container {
     width: 400px;
     background-color: #2c2c2c;
@@ -111,4 +113,11 @@ body {
     justify-content: center;
     margin-left: 10px;
     border-radius: 10px;
+}
+#darkModeToggle{
+    background-color: #181818;
+    border: 0px;
+}
+.material-symbols-outlined{
+    color: rgb(214, 197, 9);
 }
