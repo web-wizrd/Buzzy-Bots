@@ -18,17 +18,18 @@ function sendMessage() {
         document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
     }
 }
-
+var num=0;
 function toggleDarkMode() {
-    const darkModeEnabled = document.getElementById('darkModeToggle').checked;
+    num+=1;
+    const darkModeEnabled = document.getElementById('darkModeToggle');
     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
 
-    if (darkModeEnabled) {
+    if (num%2==0) {
         // Apply dark mode CSS
-        darkModeStylesheet.href = "dark-mode.css";
+        darkModeStylesheet.href = "dark.css";
     } else {
         // Remove dark mode CSS
-        darkModeStylesheet.href = "";
+        darkModeStylesheet.href = "Styles.css";
     }
 }
 
