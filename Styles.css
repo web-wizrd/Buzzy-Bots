@@ -20,7 +20,7 @@ body {
     border: 2px black solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 10px 10px rgb(77, 74, 74);
+    box-shadow: 10px 10px 15px rgba(77, 74, 74,0.5);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
