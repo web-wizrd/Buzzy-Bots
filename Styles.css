@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #555555;
     margin: 0;
     padding: 0;
     display: flex;
@@ -102,7 +102,7 @@ body {
 
 .toggle-container input {
     display: flex;
-    flex-direction: ;
+    justify-content: center;
     margin-left: 10px;
     border-radius: 10px;
 }

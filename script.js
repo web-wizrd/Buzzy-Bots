@@ -40,3 +40,14 @@ userInput.addEventListener('keypress', function(event) {
     sendMessage();
   }
 });
+
+// const userInput = document.getElementById('userInput');
+
+// userInput.addEventListener('keypress', function(event) {
+//   if (event.key === 'Enter' && !event.shiftKey) {
+//     event.preventDefault();
+//     sendMessage();
+//   } else if (event.key === 'Enter' && event.shiftKey) {
+//     userInput.value += '\n';
+//   }
+// });
