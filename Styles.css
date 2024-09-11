@@ -101,5 +101,8 @@ body {
 }
 
 .toggle-container input {
+    display: flex;
+    flex-direction: ;
     margin-left: 10px;
+    border-radius: 10px;
 }

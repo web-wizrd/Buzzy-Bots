@@ -31,3 +31,12 @@ function toggleDarkMode() {
         darkModeStylesheet.href = "";
     }
 }
+
+const userInput = document.getElementById('userInput');
+
+userInput.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    sendMessage();
+  }
+});
