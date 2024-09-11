@@ -105,6 +105,10 @@ body {
     border-radius: 10px;
 }
 
+
 .toggle-container input {
+    display: flex;
+    justify-content: center;
     margin-left: 10px;
+    border-radius: 10px;
 }
