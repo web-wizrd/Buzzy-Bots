@@ -8,7 +8,7 @@ function sendMessage() {
         document.getElementById('chatBody').innerHTML += userMessage;
 
         // Simulate bot response
-        let botMessage = `<div class="message bot"><p>I received your message: "${message}"</p></div>`;
+        let botMessage = `<div class="message bot"><p>Sure, do you have any specific date and time in mind...</p></div>`;
         document.getElementById('chatBody').innerHTML += botMessage;
 
         // Clear input
