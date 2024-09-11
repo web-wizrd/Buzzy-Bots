@@ -84,7 +84,7 @@ body {
 
 .chat-input button {
     padding: 10px;
-    background-color: #5e9c3b;
+    background-color: #005f99;
     color: white;
     border: none;
     border-radius: 5px;
@@ -93,7 +93,7 @@ body {
 }
 
 .chat-input button:hover {
-    background-color: #4CAF50;
+    background-color: #005f99;
 }
 
 .toggle-container {
@@ -110,4 +110,5 @@ body {
     display: flex;
     justify-content: center;
     margin-left: 10px;
+    border-radius: 10px;
 }
