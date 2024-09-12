@@ -13,6 +13,18 @@ body {
     background-color: white;
     border: 0px;
 }
+#send_button{
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+#send_button:hover{
+    transition-duration: 0.5s;
+    border-radius: 20px;
+}
+#send_button::after{
+    transition: ease-out;
+}
+
 .chat-container {
     width: 90%;
     height: 85%;

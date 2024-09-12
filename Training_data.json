@@ -1,0 +1,31 @@
+[
+    {
+        "user":"Hello Hi Yo Good Hey Who What Morning Evening Howdy",
+        "AI":"Hello how may I help you this fine day?"
+    },
+    {
+        "user":"book Book Ticket ticket tickets Tickets",
+        "AI":"I'd be happy to help you with booking a ticket. How Many Would You Like?"
+    },
+    {
+        "user":"complaint complain Bad bad Complain Complaint Issue Upset",
+        "AI":"Sorry to hear that. Can you please tell me more about your complaint so that i can log it"
+    },
+    {
+        "user":"1 2 3 4 5 6 7 8 9 10",
+        "AI":"Alright I'll start the payment gateway"
+    },
+    {
+        "user":"Confirm Yes Do it Pay Continue Proceed",
+        "AI":"Alright the payment gateway is opening now"
+    },
+    {
+        "user":"Thanks Bye Done Exit Quit Finish Over",
+        "AI":"Thank You Dear Customer"
+    },
+    {
+        "user":"Recepit receipt bill id ticket pass datepass entry",
+        "AI":"Here is your receipt"
+    }
+
+]
