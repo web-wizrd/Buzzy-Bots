@@ -67,3 +67,22 @@
     color: #0056b3;
   }
   
+  #darkModeToggle{
+    background-color: white;
+    border: 0px;
+}
+  
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-container input {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 10px;
+}

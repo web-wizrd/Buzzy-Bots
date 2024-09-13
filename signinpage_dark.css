@@ -6,7 +6,8 @@
   }
   
   body {
-    background-color: #f1f8e9;
+    background-color: #2f3640;
+    transition: background-color 0.3s ease;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -16,15 +17,15 @@
   
   .signup-container {
     width: 350px;
-    background: #fff;
+    background-color: #333;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     padding: 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
   }
   
   .form-box h2 {
     text-align: center;
-    color: #388e3c;
+    color: #fff;
     margin-bottom: 20px;
   }
   
@@ -36,13 +37,15 @@
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #388e3c;
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff;
     border-radius: 5px;
   }
   
   .inputBox input[type="submit"] {
     background-color: #388e3c;
-    color: white;
+    color: #fff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -55,10 +58,11 @@
   .links {
     text-align: center;
     font-size: 0.9rem;
+    color: #fff;
   }
   
   .links a {
-    color: #388e3c;
+    color: #fff;
     text-decoration: none;
   }
   

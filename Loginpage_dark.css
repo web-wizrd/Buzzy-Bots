@@ -6,7 +6,7 @@
   }
   
   body {
-    background-color: #f1f8e9;
+    background-color: #121212;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -14,17 +14,17 @@
     height: 100vh;
   }
   
-  .signup-container {
+  .login-container {
     width: 350px;
-    background: #fff;
+    background: #1e1e1e;
     padding: 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
   }
   
   .form-box h2 {
     text-align: center;
-    color: #388e3c;
+    color: #e0e0e0;
     margin-bottom: 20px;
   }
   
@@ -36,12 +36,14 @@
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #388e3c;
     border-radius: 5px;
+    background-color: #333;
+    color: #e0e0e0; 
+    border: 1px solid #4caf50; 
   }
   
   .inputBox input[type="submit"] {
-    background-color: #388e3c;
+    background-color: #4caf50; 
     color: white;
     border: none;
     cursor: pointer;
@@ -49,39 +51,41 @@
   }
   
   .inputBox input[type="submit"]:hover {
-    background-color: #2e7d32;
+    background-color: #388e3c;
   }
   
   .links {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
     font-size: 0.9rem;
   }
   
   .links a {
-    color: #388e3c;
+    color: #4caf50; 
     text-decoration: none;
   }
   
   .links a:hover {
-    color: #2e7d32;
+    color: #388e3c;;
   }
   
-  #darkModeToggle{
-    background-color: white;
-    border: 0px;
-}
-  
-.toggle-container {
+  .toggle-container {
     position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
     align-items: center;
+    border-radius: 10px;
 }
+
 
 .toggle-container input {
     display: flex;
     justify-content: center;
     margin-left: 10px;
     border-radius: 10px;
+}
+#darkModeToggle{
+    background-color: #00000000;
+    border: 0px;
 }

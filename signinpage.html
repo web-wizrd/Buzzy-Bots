@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signup Page</title>
   <link rel="stylesheet" href="signinpage.css">
+  <link rel="stylesheet" id="darkModeStylesheet" href="signinpage_dark.css">
 </head>
 <body>
+  <div class="toggle-container">
+    <label for="darkModeToggle"></label>
+    <button value="Dark Mode" id="darkModeToggle" onclick="toggleDarkMode()">
+        <span class="material-symbols-outlined" id="Theme_icon">
+            dark_mode
+            </span>
+        
+</div>
   <section class="signup-container">
     <div class="form-box">
       <h2>Sign Up</h2>
@@ -32,5 +41,6 @@
       </form>
     </div>
   </section>
+  <script src="signinpage.js"></script>
 </body>
 </html>

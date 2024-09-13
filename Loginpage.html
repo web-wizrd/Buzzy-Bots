@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="Loginpage.css">
+  <link rel="stylesheet" id="darkModeStylesheet" href="Loginpage_dark.css">
 </head>
 <body>
+  <div class="toggle-container">
+    <label for="darkModeToggle"></label>
+    <button value="Dark Mode" id="darkModeToggle" onclick="toggleDarkMode()">
+        <span class="material-symbols-outlined" id="Theme_icon">
+            dark_mode
+            </span>
+        
+</div>
   <section class="login-container">
     <div class="form-box">
       <h2>Login</h2>
@@ -29,5 +38,6 @@
       </form>
     </div>
   </section>
+  <script src="Loginpage.js"></script>
 </body>
 </html>
