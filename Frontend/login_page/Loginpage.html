@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="Loginpage.css">
   <link rel="stylesheet" id="darkModeStylesheet" href="Loginpage_dark.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
 <body>
   <div class="toggle-container">
@@ -15,13 +14,14 @@
     <button value="Dark Mode" id="darkModeToggle" onclick="toggleDarkModelp()">
         <span class="material-symbols-outlined" id="Theme_icon">
             dark_mode
-            </span>
-        
-</div>
+        </span>
+    </button>
+  </div>
+
   <section class="login-container">
     <div class="form-box">
       <h2>Login</h2>
-      <form action="login.php" method="POST">
+      <form id="loginForm">
         <div class="inputBox">
           <input type="text" name="username" required>
           <label>Username</label>
@@ -31,15 +31,17 @@
           <label>Password</label>
         </div>
         <div class="links">
-          <a href="forgotpassword.html">Forgot Password?</a>
-          <a href="signinpage.html">Sign Up</a>
+          <a href="../forgot_password/forgotpassword.html">Forgot Password?</a>
+          <a href="../signup_page/signinpage.html">Sign Up</a>
         </div>
         <div class="inputBox">
           <input type="submit" value="Login">
         </div>
       </form>
+      <p id="message"></p> <!-- Placeholder for success message -->
     </div>
   </section>
+
   <script src="../script.js"></script>
 </body>
 </html>
