@@ -108,7 +108,7 @@ async function sendMessage() {
 //         document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
 //     }
 // }
-var num=0;
+var num=2;
 function toggleDarkMode() {
     num+=1;
     const darkModeEnabled = document.getElementById('darkModeToggle');
@@ -146,3 +146,69 @@ userInput.addEventListener('keypress', function(event) {
 //     userInput.value += '\n';
 //   }
 // });
+
+function toggleDarkModefp() {
+    num+=1;
+    const darkModeEnabled = document.getElementById('darkModeToggle');
+    const darkModeStylesheet = document.getElementById('darkModeStylesheet');
+    const Theme_icon=document.getElementById('Theme_icon');
+    if (num%2!=0) {
+        // Apply dark mode CSS
+        darkModeStylesheet.href = "forgotpassword.css";
+        darkModeEnabled.value="Light Mode";
+        Theme_icon.textContent="dark_mode";
+    } else {
+        // Remove dark mode CSS
+        darkModeEnabled.value="Dark Mode";
+        darkModeStylesheet.href = "forgotpassword_dark.css";
+        Theme_icon.textContent="wb_sunny";
+    }
+}
+
+document.getElementById("forgotPasswordForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    const email = document.getElementById("email").value;
+
+    if (email) {
+      // Simulate password reset
+      document.getElementById("message").innerHTML = `A password reset link has been sent to ${email}`;
+    } else {
+      document.getElementById("message").innerHTML = "Please enter a valid email.";
+    }
+  });
+
+function toggleDarkModelp() {
+    num+=1;
+    const darkModeEnabled = document.getElementById('darkModeToggle');
+    const darkModeStylesheet = document.getElementById('darkModeStylesheet');
+    const Theme_icon=document.getElementById('Theme_icon');
+    if (num%2!=0) {
+        // Apply dark mode CSS
+        darkModeStylesheet.href = "Loginpage_dark.css";
+        darkModeEnabled.value="Light Mode";
+        Theme_icon.textContent="wb_sunny";
+    } else {
+        // Remove dark mode CSS
+        darkModeEnabled.value="Dark Mode";
+        darkModeStylesheet.href = "Loginpage.css";
+        Theme_icon.textContent="dark_mode";
+    }
+}
+
+function toggleDarkModesp() {
+    num+=1;
+    const darkModeEnabled = document.getElementById('darkModeToggle');
+    const darkModeStylesheet = document.getElementById('darkModeStylesheet');
+    const Theme_icon=document.getElementById('Theme_icon');
+    if (num%2!=0) {
+        // Apply dark mode CSS
+        darkModeStylesheet.href = "signinpage_dark.css";
+        darkModeEnabled.value="Light Mode";
+        Theme_icon.textContent="wb_sunny";
+    } else {
+        // Remove dark mode CSS
+        darkModeEnabled.value="Dark Mode";
+        darkModeStylesheet.href = "signinpage.css";
+        Theme_icon.textContent="dark_mode";
+    }
+}
