@@ -1,6 +1,6 @@
 
 async function fetchdata() {
-    const resopnse=await fetch('./Training_data.json');
+    const resopnse=await fetch('../Frontend/Training_data.json');
     data=await resopnse.json();
     return data;
 } 
@@ -71,30 +71,30 @@ function StoreMessage(Input){
         if (err) throw err;
         console.log('Data saved successfully!');
 });}
-async function sendMessage() {
-    let input = document.getElementById('userInput');
-    let message = input.value;
-    StoreMessage(message);
-    if (message.trim() !== '') {
-        // Display user's message
-        let userMessage = `<div class="message user"><p>${message}</p></div>`;
-        document.getElementById('chatBody').innerHTML += userMessage;
+// async function sendMessage() {
+//     let input = document.getElementById('userInput');
+//     let message = input.value;
+//     StoreMessage(message);
+//     if (message.trim() !== '') {
+//         // Display user's message
+//         let userMessage = `<div class="message user"><p>${message}</p></div>`;
+//         document.getElementById('chatBody').innerHTML += userMessage;
         
-        // Wait for AI response
-        let AI_response = await getAIResponse(message);
+//         // Wait for AI response
+//         let AI_response = await getAIResponse(message);
 
-        // Display AI's response
-        let botMessage = `<div class="message bot"><p>${AI_response}</p></div>`;
-        document.getElementById('chatBody').innerHTML += botMessage;
+//         // Display AI's response
+//         let botMessage = `<div class="message bot"><p>${AI_response}</p></div>`;
+//         document.getElementById('chatBody').innerHTML += botMessage;
 
-        // Clear input
-        input.value = '';
+//         // Clear input
+//         input.value = '';
 
-        // Scroll to the bottom
-        document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
-    }
+//         // Scroll to the bottom
+//         document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
+//     }
 
-}
+// }
 
 // function sendMessage() {
     
@@ -249,3 +249,39 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
       document.getElementById('message').textContent = 'Invalid username or password!';
     }
   });
+
+
+  // Simplified event listener for input field
+document.getElementById('userInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      sendMessage();
+    }
+  });
+  
+  // Simplified event listener for send button
+  document.getElementById('send_button').addEventListener('click', sendMessage);
+  
+  // Simplified sendMessage function
+  async function sendMessage() {
+    let input = document.getElementById('userInput');
+    let message = input.value;
+    if (message.trim() !== '') {
+      // Display user's message
+      let userMessage = `<div class="message user"><p>${message}</p></div>`;
+      document.getElementById('chatBody').innerHTML += userMessage;
+  
+      // Wait for AI response
+      let AI_response = await getAIResponse(message);
+  
+      // Display AI's response
+      let botMessage = `<div class="message bot"><p>${AI_response}</p></div>`;
+      document.getElementById('chatBody').innerHTML += botMessage;
+  
+      // Clear input
+      input.value = '';
+  
+      // Scroll to the bottom
+      document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
+    }
+  }
