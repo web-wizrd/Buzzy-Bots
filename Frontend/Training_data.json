@@ -11,10 +11,7 @@
         "user":"complaint complain Bad bad Complain Complaint Issue Upset",
         "AI":"Sorry to hear that. Can you please tell me more about your complaint so that i can log it"
     },
-    {
-        "user":"1 2 3 4 5 6 7 8 9 10",
-        "AI":"Alright I'll start the payment gateway"
-    },
+    
     {
         "user":"Confirm Yes Do it Pay Continue Proceed",
         "AI":"Alright the payment gateway is opening now"
@@ -29,7 +26,7 @@
     },
     {
        "user":"Recepit receipt bill id ticket pass datepass entry",
-        "AI":"Here is your receipt" 
+       "AI":"Here is your receipt" 
     }
 
 ]
