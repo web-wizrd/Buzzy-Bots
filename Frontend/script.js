@@ -63,18 +63,19 @@ async function getAIResponse(userInput) {
 // }
 
 
-// function StoreMessage(Input){
-//     const fs=require("fs");
-//     let data=[];
-//     data.push({user:Input});
-//     fs.writeFile('Data.json', JSON.stringify(data, null, 1), (err) => {
-//         if (err) throw err;
-//         console.log('Data saved successfully!');
-// });}
+function StoreMessage(Input){
+    const fs=require("fs");
+    let data=[];
+    data.push({user:Input});
+    fs.writeFile('Data.json', JSON.stringify(data, null, 1), (err) => {
+        if (err) throw err;
+        console.log('Data saved successfully!');
+});}
+
 async function sendMessage() {
     let input = document.getElementById('userInput');
     let message = input.value;
-    // StoreMessage(message);
+    StoreMessage(message);
     if (message.trim() !== '') {
         // Display user's message
         let userMessage = `<div class="message user"><p>${message}</p></div>`;
@@ -165,14 +166,14 @@ function toggleDarkModefp() {
     const Theme_icon=document.getElementById('Theme_icon');
     if (num%2!=0) {
         // Apply dark mode CSS
-        darkModeStylesheet.href = "forgotpassword.css";
+        darkModeStylesheet.href = "./Frontend/forgot_password/forgotpassword.css";
         darkModeEnabled.value="Light Mode";
         Theme_icon.textContent="dark_mode";
         
     } else {
         // Remove dark mode CSS
         darkModeEnabled.value="Dark Mode";
-        darkModeStylesheet.href = "forgotpassword_dark.css";
+        darkModeStylesheet.href = "./Frontend/forgot_password/forgotpassword_dark.css";
         Theme_icon.textContent="wb_sunny";
     }
 }
