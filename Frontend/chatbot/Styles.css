@@ -146,3 +146,31 @@ body {
   'GRAD' 0,
   'opsz' 24
 }
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.material-symbols-outlined.material-symbols-outlined:click{
+    transition: .5s ease-in-out;
+}
+
+
+.toggle-container input {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#darkModeToggle{
+    background-color: transparent;
+    border: 0px;
+}
+.material-symbols-outlined{
+    color: rgb(214, 197, 9);
+}

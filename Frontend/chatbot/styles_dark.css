@@ -119,7 +119,7 @@ body {
     border-radius: 10px;
 }
 #darkModeToggle{
-    background-color: #00000000;
+    background-color: transparent;
     border: 0px;
 }
 .material-symbols-outlined{
