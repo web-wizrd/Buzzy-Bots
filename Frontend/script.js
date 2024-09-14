@@ -212,3 +212,29 @@ function toggleDarkModesp() {
         Theme_icon.textContent="wb_sunny";
     }
 }
+
+// Handle form submission using JavaScript in signup page
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    const username = document.querySelector('input[name="username"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    // Display a message (this can be replaced with more complex JS functions if needed)
+    document.getElementById('message').textContent = `Account created for ${username} with email ${email}!`;
+  });
+
+  // Handle form submission using JavaScript in login page
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const username = document.querySelector('input[name="username"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    // Simple validation (can be replaced with more advanced logic)
+    if (username === 'admin' && password === 'password123') {
+      document.getElementById('message').textContent = 'Login successful!';
+    } else {
+      document.getElementById('message').textContent = 'Invalid username or password!';
+    }
+  });
