@@ -21,7 +21,7 @@ async function getAIResponse(userInput) {
     const data = await fetchdata();
     // Normalize the input for case insensitivity
     const normalizedInput = userInput.toLowerCase();
-
+    const hasNumber = /\d/.test(normalizedInput);
     // Loop through each item in the data array
     for (const item of data) {
         // Normalize the user phrases for case insensitivity
@@ -30,6 +30,9 @@ async function getAIResponse(userInput) {
         // Check if the input matches any of the phrases
         if (phrases.some(phrase => normalizedInput.includes(phrase))) {
             return item.AI;
+        }
+        else if (hasNumber){
+            return "Sure i'll start the payment gateway right away";
         }
     }
 
@@ -60,16 +63,23 @@ async function getAIResponse(userInput) {
 // }
 
 
-
+function StoreMessage(Input){
+    const fs=require("fs");
+    let data=[];
+    data.push({user:Input});
+    fs.writeFile('Data.json', JSON.stringify(data, null, 1), (err) => {
+        if (err) throw err;
+        console.log('Data saved successfully!');
+});}
 async function sendMessage() {
     let input = document.getElementById('userInput');
     let message = input.value;
-
+    StoreMessage(message);
     if (message.trim() !== '') {
         // Display user's message
         let userMessage = `<div class="message user"><p>${message}</p></div>`;
         document.getElementById('chatBody').innerHTML += userMessage;
-
+        
         // Wait for AI response
         let AI_response = await getAIResponse(message);
 
@@ -83,6 +93,7 @@ async function sendMessage() {
         // Scroll to the bottom
         document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
     }
+
 }
 
 // function sendMessage() {
