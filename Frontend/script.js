@@ -63,14 +63,14 @@ async function getAIResponse(userInput) {
 // }
 
 
-function StoreMessage(Input){
-    const fs=require("fs");
-    let data=[];
-    data.push({user:Input});
-    fs.writeFile('Data.json', JSON.stringify(data, null, 1), (err) => {
-        if (err) throw err;
-        console.log('Data saved successfully!');
-});}
+// function StoreMessage(Input){
+//     const fs=require("fs");
+//     let data=[];
+//     data.push({user:Input});
+//     fs.writeFile('Data.json', JSON.stringify(data, null, 1), (err) => {
+//         if (err) throw err;
+//         console.log('Data saved successfully!');
+// });}
 async function sendMessage() {
     let input = document.getElementById('userInput');
     let message = input.value;
