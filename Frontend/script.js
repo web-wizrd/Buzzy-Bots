@@ -119,7 +119,7 @@ async function sendMessage() {
 //         document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
 //     }
 // }
-var num=2;
+var num=1;
 function toggleDarkMode() {
     num+=1;
     const darkModeEnabled = document.getElementById('darkModeToggle');
@@ -167,12 +167,13 @@ function toggleDarkModefp() {
         // Apply dark mode CSS
         darkModeStylesheet.href = "forgotpassword.css";
         darkModeEnabled.value="Light Mode";
-        Theme_icon.textContent="wb_sunny";
+        Theme_icon.textContent="dark_mode";
+        
     } else {
         // Remove dark mode CSS
         darkModeEnabled.value="Dark Mode";
         darkModeStylesheet.href = "forgotpassword_dark.css";
-        Theme_icon.textContent="dark_mode";
+        Theme_icon.textContent="wb_sunny";
     }
 }
 
@@ -258,30 +259,3 @@ document.getElementById('userInput').addEventListener('keypress', function(event
       sendMessage();
     }
   });
-  
-  // // Simplified event listener for send button
-  // document.getElementById('send_button').addEventListener('click', sendMessage);
-  
-  // // Simplified sendMessage function
-  // async function sendMessage() {
-  //   let input = document.getElementById('userInput');
-  //   let message = input.value;
-  //   if (message.trim() !== '') {
-  //     // Display user's message
-  //     let userMessage = `<div class="message user"><p>${message}</p></div>`;
-  //     document.getElementById('chatBody').innerHTML += userMessage;
-  
-  //     // Wait for AI response
-  //     let AI_response = await getAIResponse(message);
-  
-  //     // Display AI's response
-  //     let botMessage = `<div class="message bot"><p>${AI_response}</p></div>`;
-  //     document.getElementById('chatBody').innerHTML += botMessage;
-  
-  //     // Clear input
-  //     input.value = '';
-  
-  //     // Scroll to the bottom
-  //     document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
-  //   }
-  // }
