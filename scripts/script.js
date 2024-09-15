@@ -208,23 +208,23 @@ function toggleDarkModelp() {
     }
 }
 
-function toggleDarkModesp() {
-    num+=1;
-    const darkModeEnabled = document.getElementById('darkModeToggle');
-    const darkModeStylesheet = document.getElementById('darkModeStylesheet');
-    const Theme_icon=document.getElementById('Theme_icon');
-    if (num%2!=0) {
-        // Apply dark mode CSS
-        darkModeEnabled.value="Dark Mode";
-        darkModeStylesheet.href = "./styles/signinpage.css";
-        Theme_icon.textContent="dark_mode";
-    } else {
-        // Remove dark mode CSS
-        darkModeStylesheet.href = "./styles/signinpage_dark.css";
-        darkModeEnabled.value="Light Mode";
-        Theme_icon.textContent="wb_sunny";
-    }
-}
+// function toggleDarkModesp() {
+//     num+=1;
+//     const darkModeEnabled = document.getElementById('darkModeToggle');
+//     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
+//     const Theme_icon=document.getElementById('Theme_icon');
+//     if (num%2!=0) {
+//         // Apply dark mode CSS
+//         darkModeEnabled.value="Dark Mode";
+//         darkModeStylesheet.href = "./styles/signinpage.css";
+//         Theme_icon.textContent="dark_mode";
+//     } else {
+//         // Remove dark mode CSS
+//         darkModeStylesheet.href = "./styles/signinpage_dark.css";
+//         darkModeEnabled.value="Light Mode";
+//         Theme_icon.textContent="wb_sunny";
+//     }
+// }
 
 // Handle form submission using JavaScript in signup page
 document.getElementById('signupForm').addEventListener('submit', function(event) {
@@ -260,3 +260,22 @@ document.getElementById('userInput').addEventListener('keypress', function(event
       sendMessage();
     }
   });
+
+  function toggleDarkModesp() {
+    const darkModeStylesheet = document.getElementById('darkModeStylesheet');
+    const iconContainer = document.querySelector('.icon-container');
+    
+    console.log('Current stylesheet:', darkModeStylesheet.href);
+    
+    iconContainer.classList.toggle('animate');
+    
+    setTimeout(() => {
+        if (darkModeStylesheet.href.includes('signinpage.css')) {
+            console.log('Switching to dark mode');
+            darkModeStylesheet.href = './styles/signinpage_dark.css';
+        } else {
+            console.log('Switching to light mode');
+            darkModeStylesheet.href = './styles/signinpage.css';
+        }
+    }, 500);
+}
