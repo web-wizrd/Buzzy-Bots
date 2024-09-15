@@ -110,67 +110,41 @@ body {
     background-color: #45a049;
 }
 
-.toggle-container {
+.icon-container {
     position: absolute;
-    top: 20px;
+    top: 20px; /* Place the icon in the top-right corner */
     right: 20px;
-    display: flex;
-    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
 }
 
-.toggle-container input {
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
-    border-radius: 10px;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 1000,
-  'GRAD' 100,
-  'opsz' 48
-
-}
-.material-symbols-outlined{
-    color: black;
-}
-
-
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-.toggle-container {
+.sun, .moon {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease, opacity 1s ease;
 }
 
-.material-symbols-outlined.material-symbols-outlined:click{
-    transition: .5s ease-in-out;
+.sun {
+    color: #ffcc00;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
 }
 
+.moon {
+    color: #333;
+    opacity: 1;
+    transform: scale(1) rotate(-360deg);
+}
 
-.toggle-container input {
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
-    border-radius: 10px;
+.icon-container.animate .sun {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
 }
-#darkModeToggle{
-    background-color: transparent;
-    border: 0px;
-}
-.material-symbols-outlined{
-    color: rgb(214, 197, 9);
+
+.icon-container.animate .moon {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
 }
