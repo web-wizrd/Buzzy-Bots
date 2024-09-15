@@ -1,6 +1,6 @@
 
 async function fetchdata() {
-    const resopnse=await fetch('../Frontend/Training_data.json');
+    const resopnse=await fetch('../DataJson/Training_data.json');
     data=await resopnse.json();
     return data;
 } 
@@ -128,13 +128,13 @@ function toggleDarkMode() {
     const Theme_icon=document.getElementById('Theme_icon');
     if (num%2!=0) {
         // Apply dark mode CSS
-        darkModeStylesheet.href = "dark.css";
+        darkModeStylesheet.href = "./styles/Styles_dark.css";
         darkModeEnabled.value="Light Mode";
         Theme_icon.textContent="wb_sunny";
     } else {
         // Remove dark mode CSS
         darkModeEnabled.value="Dark Mode";
-        darkModeStylesheet.href = "Styles.css";
+        darkModeStylesheet.href = "./styles/Styles.css";
         Theme_icon.textContent="dark_mode";
     }
 }
@@ -198,11 +198,11 @@ function toggleDarkModelp() {
     if (num%2!=0) {
         // Apply dark mode CSS
         darkModeEnabled.value="Dark Mode";
-        darkModeStylesheet.href = "Loginpage.css";
+        darkModeStylesheet.href = "./styles/Loginpage.css";
         Theme_icon.textContent="dark_mode";
     } else {
         // Remove dark mode CSS
-        darkModeStylesheet.href = "Loginpage_dark.css";
+        darkModeStylesheet.href = "./styles/Loginpage_dark.css";
         darkModeEnabled.value="Light Mode";
         Theme_icon.textContent="wb_sunny";
     }
@@ -216,11 +216,11 @@ function toggleDarkModesp() {
     if (num%2!=0) {
         // Apply dark mode CSS
         darkModeEnabled.value="Dark Mode";
-        darkModeStylesheet.href = "signinpage.css";
+        darkModeStylesheet.href = "./styles/signinpage.css";
         Theme_icon.textContent="dark_mode";
     } else {
         // Remove dark mode CSS
-        darkModeStylesheet.href = "signinpage_dark.css";
+        darkModeStylesheet.href = "./styles/signinpage_dark.css";
         darkModeEnabled.value="Light Mode";
         Theme_icon.textContent="wb_sunny";
     }
