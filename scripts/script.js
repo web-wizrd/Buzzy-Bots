@@ -192,21 +192,21 @@ function toggleDarkModelp() {
 function toggleDarkModefp() {
   const darkModeStylesheet = document.getElementById('darkModeStylesheet');
   const iconContainer = document.querySelector('.icon-container');
-  
-  console.log('Current stylesheet:', darkModeStylesheet.href);
-  
+
+  // Toggle the animation class for the sun and moon icons
   iconContainer.classList.toggle('animate');
-  
+
   setTimeout(() => {
-      if (darkModeStylesheet.href.includes('/forgotpassword.css')) {
-          console.log('Switching to dark mode');
-          darkModeStylesheet.href = './Frontend/forgot_password/forgotpassword_dark.css';
-      } else {
-          console.log('Switching to light mode');
-          darkModeStylesheet.href = './Frontend/forgot_password/forgotpassword.css';
-      }
-  }, 500);
+    const currentStylesheet = darkModeStylesheet.href.split('/').pop();
+
+    if (currentStylesheet === 'forgotpassword_dark.css') {
+      darkModeStylesheet.href = './styles/forgotpassword.css';
+    } else {
+      darkModeStylesheet.href = './styles/forgotpassword_dark.css';
+    }
+  }, 300); // Adjust this delay for the icon animation
 }
+
 
 
 function toggleDarkMode() {
@@ -225,5 +225,5 @@ function toggleDarkMode() {
           console.log('Switching to light mode');
           darkModeStylesheet.href = './styles/Styles.css';
       }
-  }, 1000);
+  }, 100);
 }

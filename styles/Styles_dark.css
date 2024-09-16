@@ -77,16 +77,16 @@ body {
     background-color: #444;
 }
 
-.chat-input input {
-    flex: 1;
+.inputBox input {
+    width: 100%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #666;
-    border-radius: 5334px;
-    outline: none;
-    background-color: #555;
-    color: white;
+    font-size: 1rem;
+    border: 1px solid #d81b1b;
+    border-radius: 5px;
+    background-color: #fff; /* Set input box background to white */
+    color: #333; /* Dark text color for contrast */
 }
+
 
 .chat-input button {
     padding: 10px;
