@@ -6,16 +6,6 @@ async function fetchdata() {
 } 
 
 
-// (async function() {
-//     const data=await fetchdata();  
-//     if(data){
-//         console.log(data);
-//     }
-// })();
-
-// fetchdata().then(data=>{
-//     console.log(data);
-// })
 
 async function getAIResponse(userInput) {
     const data = await fetchdata();
@@ -40,27 +30,7 @@ async function getAIResponse(userInput) {
     return "Sorry, I don't understand that request.";
 }
 
-// async function getAIResponse(userInput) {
-        
-//         const data=await fetchdata();
-//         // Normalize the input for case insensitivity
-//         const normalizedInput = userInput;
 
-//         // Loop through each item in the data array
-//         for (const item of data) {
-//             // Normalize the user phrases for case insensitivity
-//             const phrases = item.user.split(' ');
-
-//             // Check if the input matches any of the phrases
-//             if (phrases.some(phrase => normalizedInput.includes(phrase))) {
-//                 return item.AI;
-//             }
-//         }
-
-//         // Return a default response if no match is found
-//         return "Sorry, I don't understand that request.";
-    
-// }
 
 
 function StoreMessage(Input){
@@ -120,24 +90,7 @@ async function sendMessage() {
 //         document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
 //     }
 // }
-// var num=1;
-// function toggleDarkMode() {
-//     num+=1;
-//     const darkModeEnabled = document.getElementById('darkModeToggle');
-//     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
-//     const Theme_icon=document.getElementById('Theme_icon');
-//     if (num%2!=0) {
-//         // Apply dark mode CSS
-//         darkModeStylesheet.href = "./styles/Styles_dark.css";
-//         darkModeEnabled.value="Light Mode";
-//         Theme_icon.textContent="wb_sunny";
-//     } else {
-//         // Remove dark mode CSS
-//         darkModeEnabled.value="Dark Mode";
-//         darkModeStylesheet.href = "./styles/Styles.css";
-//         Theme_icon.textContent="dark_mode";
-//     }
-// }
+
 
 const userInput = document.getElementById('userInput');
 
@@ -148,35 +101,7 @@ userInput.addEventListener('keypress', function(event) {
   }
 });
 
-// const userInput = document.getElementById('userInput');
 
-// userInput.addEventListener('keypress', function(event) {
-//   if (event.key === 'Enter' && !event.shiftKey) {
-//     event.preventDefault();
-//     sendMessage();
-//   } else if (event.key === 'Enter' && event.shiftKey) {
-//     userInput.value += '\n';
-//   }
-// });
-
-// function toggleDarkModefp() {
-//     num+=1;
-//     const darkModeEnabled = document.getElementById('darkModeToggle');
-//     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
-//     const Theme_icon=document.getElementById('Theme_icon');
-//     if (num%2!=0) {
-//         // Apply dark mode CSS
-//         darkModeStylesheet.href = "./Frontend/forgot_password/forgotpassword.css";
-//         darkModeEnabled.value="Light Mode";
-//         Theme_icon.textContent="dark_mode";
-        
-//     } else {
-//         // Remove dark mode CSS
-//         darkModeEnabled.value="Dark Mode";
-//         darkModeStylesheet.href = "./Frontend/forgot_password/forgotpassword_dark.css";
-//         Theme_icon.textContent="wb_sunny";
-//     }
-// }
 
 document.getElementById("forgotPasswordForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from submitting
@@ -189,42 +114,6 @@ document.getElementById("forgotPasswordForm").addEventListener("submit", functio
       document.getElementById("message").innerHTML = "Please enter a valid email.";
     }
   });
-
-// function toggleDarkModelp() {
-//     num+=1;
-//     const darkModeEnabled = document.getElementById('darkModeToggle');
-//     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
-//     const Theme_icon=document.getElementById('Theme_icon');
-//     if (num%2!=0) {
-//         // Apply dark mode CSS
-//         darkModeEnabled.value="Dark Mode";
-//         darkModeStylesheet.href = "./styles/Loginpage.css";
-//         Theme_icon.textContent="dark_mode";
-//     } else {
-//         // Remove dark mode CSS
-//         darkModeStylesheet.href = "./styles/Loginpage_dark.css";
-//         darkModeEnabled.value="Light Mode";
-//         Theme_icon.textContent="wb_sunny";
-//     }
-// }
-
-// function toggleDarkModesp() {
-//     num+=1;
-//     const darkModeEnabled = document.getElementById('darkModeToggle');
-//     const darkModeStylesheet = document.getElementById('darkModeStylesheet');
-//     const Theme_icon=document.getElementById('Theme_icon');
-//     if (num%2!=0) {
-//         // Apply dark mode CSS
-//         darkModeEnabled.value="Dark Mode";
-//         darkModeStylesheet.href = "./styles/signinpage.css";
-//         Theme_icon.textContent="dark_mode";
-//     } else {
-//         // Remove dark mode CSS
-//         darkModeStylesheet.href = "./styles/signinpage_dark.css";
-//         darkModeEnabled.value="Light Mode";
-//         Theme_icon.textContent="wb_sunny";
-//     }
-// }
 
 // Handle form submission using JavaScript in signup page
 document.getElementById('signupForm').addEventListener('submit', function(event) {
