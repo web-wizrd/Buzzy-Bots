@@ -116,22 +116,22 @@ body {
 
 .sun {
     color: #ffcc00;
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-}
-
-.moon {
-    color: #333;
-    opacity: 0;
-    transform: scale(0) rotate(-360deg);
-}
-
-.icon-container.animate .sun {
     opacity: 0;
     transform: scale(0) rotate(0deg);
 }
 
-.icon-container.animate .moon {
+.moon {
+    color: #333;
+    opacity: 1;
+    transform: scale(1) rotate(-360deg);
+}
+
+.icon-container.animate .sun {
     opacity: 1;
     transform: scale(1) rotate(180deg);
+}
+
+.icon-container.animate .moon {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
 }
